@@ -17,7 +17,7 @@
   width: 95%;
   margin: auto;
   grid-gap: 10px;
-  padding: 40px 0;
+  padding: 40px 0;  
 }
 
 .nav{
@@ -50,4 +50,8 @@ h1 {
 .carrito{
   padding-right: 10px;
   margin: 30px; 
+}
+
+#backgr {
+  background-color: #0a0707ea;
 }
