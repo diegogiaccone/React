@@ -3,7 +3,7 @@ import { Card, CardHeader, CardBody, CardFooter, Divider, ButtonGroup, Button, S
 const ItemListConteiner = () => {
   return (
     <div className="tarjetas">
-      <div >        
+      <div>        
       <Card maxW='sm'>
   <CardBody>
    <img src="./img/imagen1.png" alt="" />

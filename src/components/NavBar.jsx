@@ -10,7 +10,7 @@ const NavBar = ({greeting}) => {
   return (
     <div className="nav">
       <div className="brand">
-      <img class="logo" src="./Img/imagen.png" alt="Logo"></img>     
+      <img className="logo" src="./Img/imagen.png" alt="Logo"></img>     
       <h1>{greeting}</h1>      
       </div>
 <Menu>
