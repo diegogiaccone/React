@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "Iron Man",
+      "img":"../img/imagen1.png",
+      "price": 3500,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 5,
+      "categoryId":"MARVEL"
+    },
+    {
+      "id": 2,
+      "name": "Dead Pool",
+      "img":"../img/imagen2.png",
+      "price": 2700,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 7,
+      "categoryId":"MARVEL"
+    },
+    {
+      "id": 3,
+      "name": "Kurt Cobain",
+      "img":"../img/imagen3.png",
+      "price": 3400,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 3,
+      "categoryId":"MUSICA"
+    },
+    {
+      "id": 4,
+      "name": "Manos de Tijera",
+      "img":"../img/imagen4.png",
+      "price": 2900,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 6,
+      "categoryId":"PELICULAS"
+    },
+    {
+      "id": 5,
+      "name": "Spider Man",
+      "img":"../img/imagen5.png",
+      "price": 2600,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 5,
+      "categoryId":"MARVEL"
+    },
+    {
+      "id": 6,
+      "name": "Joker",
+      "img":"../img/imagen6.png",
+      "price": 3200,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 9,
+      "categoryId":"DC COMICS"
+    },
+    {
+      "id": 7,
+      "name": "Naruto",
+      "img":"../img/imagen7.png",
+      "price": 3300,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 12,
+      "categoryId":"ANIME"
+    },
+    {
+      "id": 8,
+      "name": "Venom",
+      "img":"../img/imagen8.png",
+      "price": 2900,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 15,
+      "categoryId":"MARVEL"
+    },
+    {
+      "id": 9,
+      "name": "Thor",
+      "img":"../img/imagen9.png",
+      "price": 3000,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 12,
+      "categoryId":"MARVEL"
+    }
+  ]

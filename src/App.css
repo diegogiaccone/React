@@ -39,12 +39,13 @@
   height: 80px;
 }
 
-h1 {
+.boton {
+  display: flex;
   color: rgb(10, 10, 10);
   font-family: 'Pacifico', cursive;
-  justify-content: center;
-  padding-top: 35px;
-  
+  justify-content: center;  
+  padding-left: 10px;
+  padding-top: 30px;
 }
 
 .carrito{
