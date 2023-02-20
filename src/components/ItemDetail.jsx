@@ -29,7 +29,7 @@ const ItemDetail = ({funko}) => {
                 <Divider />
                 <CardFooter>
                 <ButtonGroup spacing='2'>
-                <ItemCount/>
+                <ItemCount stock={item.stock}/>
                 <Button variant="solid" colorScheme="orange">
                     Agregar al Carrito
                   </Button>

@@ -56,3 +56,18 @@
 #backgr {
   background-color: #0a0707ea;
 }
+
+.counter{
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  background-color: rgba(255, 68, 0, 0.904);
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+strong{
+  color: #ffffff;  
+}
