@@ -79,5 +79,86 @@
       "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
       "stock": 12,
       "categoryId":"MARVEL"
+    },
+    {
+      "id": 10,
+      "name": "Freddy Mercury",
+      "img":"../img/imagen10.png",
+      "price": 3300,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 12,
+      "categoryId":"MUSICA"
+    },
+    {
+      "id": 11,
+      "name": "Screem",
+      "img":"../img/imagen11.png",
+      "price": 2900,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 15,
+      "categoryId":"PELICULAS"
+    },
+    {
+      "id": 12,
+      "name": "Slash",
+      "img":"../img/imagen12.png",
+      "price": 3000,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 12,
+      "categoryId":"MUSICA"
+    },
+    {
+      "id": 13,
+      "name": "Light Yagami",
+      "img":"../img/imagen13.png",
+      "price": 3500,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 16,
+      "categoryId":"ANIME"
+    },
+    {
+      "id": 14,
+      "name": "Flash",
+      "img":"../img/imagen14.png",
+      "price": 3500,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 15,
+      "categoryId":"DC COMICS"
+    },
+    {
+      "id": 15,
+      "name": "Batman",
+      "img":"../img/imagen15.png",
+      "price": 3600,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 18,
+      "categoryId":"DC COMICS"
+    },
+    {
+      "id": 16,
+      "name": "Goku",
+      "img":"../img/imagen16.png",
+      "price": 3400,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 12,
+      "categoryId":"ANIME"
+    },
+    {
+      "id": 17,
+      "name": "Beetlejuice",
+      "img":"../img/imagen17.png",
+      "price": 2800,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 10,
+      "categoryId":"PELICULAS"
+    },
+    {
+      "id": 18,
+      "name": "Cyclops",
+      "img":"../img/imagen18.png",
+      "price": 3400,
+      "description": "Edición limitada no te lo podes perder. Esta increible oferta expira el 30 de agosto del 2023.",
+      "stock": 12,
+      "categoryId":"MARVEL"
     }
   ]
