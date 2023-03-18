@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 
+/*este componente crea el contexto, que se utiliza en el resto de los componentes*/
 
 export const CartContext = createContext(null);
 
