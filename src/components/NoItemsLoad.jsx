@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import { Link } from "react-router-dom";
+import SendOrder from './SendOrder';
 
 const NoItemsLoad = () => {
   return (
@@ -10,7 +11,7 @@ const NoItemsLoad = () => {
         <p className='strong'>Vuelve al menu para poder ver nuestros productos</p>
         <Link to={"../"}>
           <button className="tienda">Ir a la  Tienda </button>
-        </Link>
+        </Link>        
     </div>
   )
 }

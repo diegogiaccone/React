@@ -13,11 +13,11 @@ const SendOrder = () => {
     const [lastname, setLastname] = useState("");
  
     const db = getFirestore()
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        addDoc(ordersCollection, order).then(({id}) => setOrderId(id));
+    };
 
-const handleSubmit = (e) => {
-    e.preventDefault()
-    addDoc(ordersCollection, order).then(({id}) => setOrderId(id));
-};
 
 const order ={
     name,
@@ -32,10 +32,10 @@ const ordersCollection = collection(db, "orden")
     <form className='formulario' onSubmit={handleSubmit}>
       <input className='controles' type="text" onChange={(e) => setName(e.target.value)} placeholder="Nombre" required/>
       <input className='controles' type="text" onChange={(e) => setLastname(e.target.value)} placeholder="Apellido" required/>
-      <input className='controles' type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
-      <textarea className='textarea' placeholder="Comentario" required cols="30" rows="10"/>
-      <button className='controles' type='submit' onClick={removeAll}>Enviar Orden de Compra</button>
-    <h2 bg="red">ID de la orden {orderId}</h2>
+      <input className='controles' type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>   
+      <button className='controles' type='submit'>Enviar Orden de Compra</button>
+      <button className='controles' type='submit' onClick={removeAll}>Finalizar</button>
+      <h2 bg="red">ID de la orden {orderId}</h2>
     </form>
 
     </div>
@@ -43,3 +43,8 @@ const ordersCollection = collection(db, "orden")
 }
 
 export default SendOrder
+
+
+
+
+
