@@ -1,37 +1,28 @@
 import ItemDetail from "./itemDetail"
-import Data from "../data.json"
+import Loading from "./Loading";
+import { useState , useEffect } from 'react';
+import { collection, getDocs, getFirestore } from "firebase/firestore"
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {  
-    const {id} = useParams()
-    
-    const getDatos = () => {
-        return new Promise ((resolve, reject) => {
-            if (Data.length === 0) {
-                reject (new Error ("No hay datos"));
-            }
-            setTimeout(() => {
-                const funkoFilter = Data.filter((item) => item.id == id)
-                resolve(funkoFilter);               
-            }, 2000);
-        }); 
-    };
-    
-    async function fetchingData() {       
-        try {
-            const datosFetched = await getDatos ();            
-            setFunko(datosFetched)
-        } catch (err) {
-        
-        }
-    }
-
-    fetchingData();
-        
-    
+    const [data, setData] = useState ([]);
+    const [loading, setLoading] = useState(true);   
+     
+    useEffect (() => {
+        const db = getFirestore ();
+        const ItemsCollection = collection (db, "Funkos");
+        getDocs(ItemsCollection).then((snapshot)=>{
+            const products = snapshot.docs.map((doc) => ({
+              ...doc.data(), id: doc.id,
+            }));
+            setData(products);
+            setLoading(false);
+        });
+    }, []);
+         
     return (
         <div className="tarjetas">
-            <ItemDetail funko={Data}/> 
+            {loading ? <Loading /> : <ItemDetail products={data}/>} 
         </div>
         ) 
 

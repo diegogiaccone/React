@@ -2,6 +2,7 @@ import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Divider, ButtonGroup, Button, Stack, Heading, RangeSliderFilledTrack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
+/* Este componente recibe por prop los paramentros para poder visualizar las card que me trae itemlist.jsx */
 
 const Item = ({id, name, img, description, price, stock, categoryId}) => {  
       

@@ -15,6 +15,9 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+
+/* Este componete visualiza el NavBar, que no tiene una ruta, porque se visualiza en todos los componentes */
+
 const NavBar = () => {
   return (
     <>

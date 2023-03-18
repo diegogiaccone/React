@@ -1,52 +1,38 @@
 import ItemList from './ItemList'
-import Data from "../data.json"
 import { useParams } from 'react-router-dom';
+import { useState , useEffect } from 'react';
+import { collection, getDocs, getFirestore } from "firebase/firestore"
+
+/* Pasa toda la logica para el resto de los componentes, tambien tiene la collection de FireBase donde se encuentra todo los productos */
 
 const ItemListContainer = () => {
+  const [products, setProducts] = useState ([])
   const {categoryId} = useParams();  
-    
-  const getDatos = () => {
-    return new Promise((resolve, reject) => {
-      if (Data.length === 0) {       
-        reject(new Error("No hay datos"));
-      }
-      setTimeout(() => {
-        resolve(Data);
-    }, 2000);      
-    })
-  }
 
-async function fetchingData() {    
-  try{
-    const datosFetched = await getDatos()      
-  }catch(err) {
-  }
-}
-
-fetchingData();
-
-if (categoryId === undefined){
-  return(
-    <div>
-      <ItemList funko={Data} />     
-    </div>
-  )
-}else{
-  const catFilter = Data.filter((funko) => funko.categoryId === categoryId);
-    
-
+  useEffect (() => {
+      const db = getFirestore ();
+      const ItemsCollection = collection (db, "Funkos");
+      getDocs(ItemsCollection).then((snapshot)=>{
+          const products = snapshot.docs.map((doc) => ({
+            ...doc.data(), id: doc.id,
+          }));
+          setProducts(products);
+        });
+        
+        
+      },[]);
+      
+     
+  const catFilter = (products.filter((funko) => funko.categoryId === categoryId))     
+      
   return (
-  <div>    
-    {
-      catFilter ? (
-        <ItemList funko={catFilter}/>
-      ) : 
-        <ItemList funko={Data}/>        
-    }
+  <div>      
+    {categoryId ? <ItemList funko={catFilter} />  : <ItemList funko={products} />}
   </div>
+  
     )
   }
-}  
+ 
 
 export default ItemListContainer
 

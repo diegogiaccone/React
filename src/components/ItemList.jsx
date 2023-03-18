@@ -1,19 +1,22 @@
 import Item from './Item'
 
-const ItemList = ({funko}) => {   
+/* El componente ItemList lo que hace es listar visualmente cada uno de los productos recibiendo como prop a produc para poder hacer la logica */
+
+const ItemList = ({funko}) => {    
   return (
     <div className='tarjetas'>       
-      {funko.map((item) => {
+      {funko.map((prod) => {
         return(
+           /* Le manda al componente Item las props*/
                 <Item
-                  key={item.id}
-                      id={item.id}
-                      name={item.name}
-                      img={item.img}
-                      description={item.description}
-                      price={item.price}
-                      stock={item.stock}
-                      categoryId={item.categoryId}
+                  key={prod.id}
+                      id={prod.id}
+                      name={prod.name}
+                      img={prod.img}
+                      description={prod.description}
+                      price={prod.price}
+                      stock={prod.stock}
+                      categoryId={prod.categoryId}
                       />
                     )
                   }                         

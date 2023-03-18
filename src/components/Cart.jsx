@@ -1,24 +1,62 @@
-import React, { useState } from 'react'
+import {
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  Button,
+  Container,
+  Box,
+  Textarea,
+  Center,
+  Heading,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Text,
+} from "@chakra-ui/react";
+import { useState, useContext } from "react";
+import { CartContext } from "../contexts/CartContext";
+import SendOrder from "./SendOrder";
+import NoItemsLoad from "./NoItemsLoad";
+
+/*renderiza los items del carrito y del formulario de sendorder*/ 
 
 const Cart = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();    
-  };
-  return (
-    <div className='forma'>
-    <form className='formulario' onSubmit={handleSubmit}>
-      <input className='controles' type="text" onChange={(e) => setNombre(e.target.value)} placeholder="Nombre" required/>
-      <input className='controles' type="text" onChange={(e) => setApellido(e.target.value)} placeholder="Apellido" required/>
-      <input className='controles' type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" required/>
-      <textarea className='textarea' placeholder="Comentario" required cols="30" rows="10"/>
-      <button className='controles' type='submit'>Enviar Informacion</button>
-    </form>
+  const { cart, setCart, removeAll, calcularTotalCompra } = useContext(CartContext); 
+ 
+  return !cart.length ? (
+    <NoItemsLoad />
+) : (
+    <div className="tarjetas">
+      {cart.map((item) => {  
+        return (
+          <div key={item.id}>
+            <Card maxW="sm">
+              <CardHeader>
+                <Heading size="md">{item.name}</Heading>
+                <img src={item.img} alt="" />
+              </CardHeader>
+              <CardBody>
+                <Text as="b">Cantidad: {item.quantity}</Text>
+                <Text>Precio: $ {item.price}</Text>
+                <Text>Total: $ {item.price * item.quantity}</Text>
+              </CardBody>
+              <CardFooter>
+              <div className="bloqButtonClear">
+                <button className="btn btn-danger btnClear" onClick={removeAll}>
+                    Vaciar carrito
+                </button>
+                </div>
+              </CardFooter>
+            </Card>            
+          </div>         
+        );
+      }
+      )}    
+    <SendOrder/>
     </div>
-  )
-}
+  );
+};
 
-export default Cart
+export default Cart;
