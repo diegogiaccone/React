@@ -39,7 +39,5 @@ const App = () => {
   return <Component />
 }
 ```
-## Gif de la page
-![Alt Text](./src/assets/img_producto/Computer%20Technology%20-%20Google%20Chrome%202023-02-19%2013-29-57.gif)
 
----
+

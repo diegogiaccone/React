@@ -25,7 +25,7 @@ const NavBar = () => {
         <Flex alignItems="center" gap="2">
           <Avatar
             size="xl"
-            src="../img/imagen.png"/>          
+            src="https://i.postimg.cc/L809hvGc/imagen.png"/>          
             <Heading size="md">
               <Link to={"/"}>FunkoPops</Link>
             </Heading>        
