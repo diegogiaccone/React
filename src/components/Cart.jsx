@@ -23,7 +23,7 @@ import NoItemsLoad from "./NoItemsLoad";
 /*renderiza los items del carrito y del formulario de sendorder*/ 
 
 const Cart = () => {
-  const { cart, setCart, removeAll, calcularTotalCompra } = useContext(CartContext); 
+  const { cart, setCart, removeAll, total} = useContext(CartContext); 
  
   return !cart.length ? (
     <NoItemsLoad />
@@ -49,12 +49,15 @@ const Cart = () => {
                 </button>
                 </div>
               </CardFooter>
-            </Card>            
-          </div>         
+            </Card>   
+          </div>          
         );
       }
-      )}    
-    <SendOrder/>
+      )}             
+        <div className="total">
+          <h4>TOTAL $ {total()}</h4>
+          <SendOrder/>
+        </div>         
     </div>
   );
 };

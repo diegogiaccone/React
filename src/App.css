@@ -73,11 +73,11 @@ strong{
 }
 
 .formulario{
-  width: 430px;
+  width: 100%;
   background: #24303c;
   padding: 50px;  
-  margin: auto;
-  margin-top: 150px;
+  margin: auto;  
+  margin-top: 10%;
   border-radius: 4px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
@@ -85,7 +85,7 @@ strong{
 }
 
 .controles {
-  width: 100%;
+  width: 100%; 
   background: #24303c;
   padding: 10px;
   border-radius: 4px;
@@ -119,4 +119,20 @@ strong{
 .agregar{
   display: flex;
   justify-content: center;
+}
+
+.total{  
+  background-color: #059c51;
+  padding: 10px;
+  width: 100%;
+  height: 8%;
+  margin: 10px;
+  box-shadow: 7px 13px 37px #000;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+h4{
+  color: #ffffff;  
 }
